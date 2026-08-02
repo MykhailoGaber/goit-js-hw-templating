@@ -1,0 +1,12 @@
+<ul class="list">
+  {{#each this}}
+    <li class="item" id="{{id}}">
+      <h3 class="name">{{name}}</h3>
+      <div class="img-container">
+        <img src="{{photo}}" alt="photo {{name}}" class="image" />
+      </div>
+      <p class="price">price: {{price}}</p>
+      <p class="description">description: {{description}}</p>
+    </li>
+  {{/each}}
+</ul>

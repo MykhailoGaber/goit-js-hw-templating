@@ -1,0 +1,36 @@
+<h2 class="countries__title">Countries</h2>
+<ul class="countries__list">
+  {{#each this}}
+    <li class="countries__item">
+      <article class="country">
+
+        <div class="country__top">
+          {{#if infected}}
+            <span class="status__infected">infected</span>
+          {{else}}
+            <span class="status__clear">clear</span>
+          {{/if}}
+          <div class="country__photo">
+            <img src="{{flag}}" alt="flag {{name}}" class="country__photo" />
+          </div>
+          <h2 class="country__name">{{name}}</h2>
+        </div>
+
+        <div class="country__info">
+          <li class="country__item--capital">
+            <p class="country__capital">Capital: {{capital}}</p>
+          </li>
+          <li class="country__item--currency">
+            <p class="country__currency">Currency: {{currency}}</p>
+          </li>
+          <li class="country__item--language">
+            <p class="country__language">Language: {{language}}</p>
+          </li>
+          <li class="country__item--population">
+            <p class="country__population">Population: {{population}}</p>
+          </li>
+        </div>
+      </article>
+    </li>
+  {{/each}}
+</ul>
